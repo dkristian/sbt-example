@@ -3,14 +3,6 @@ import Keys._
 import java.util.TimeZone
 
 object MyProjBuild extends Build {
-  lazy val coreSettings = Defaults.defaultSettings ++ Seq (
-    name := "core",
-    mainClass in Runtime := Some("Core")
-  )
-  lazy val apiSettings = Defaults.defaultSettings ++ Seq (
-    name := "api",
-    mainClass in Runtime := Some("Api")
-  )
   lazy val core = Project("core", file("."))
   lazy val api = Project("api", file("."))
 
